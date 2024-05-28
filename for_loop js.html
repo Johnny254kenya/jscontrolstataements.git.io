@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Loop Example</title>
+</head>
+<body>
+  <h1>List of Fruits</h1>
+  <ul id="fruitList"></ul>
+  <p id="workers"></p>
+  
+  <script>
+    // Array of fruits
+    const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+    
+    // Get the fruitList element
+    const fruitList = document.getElementById('fruitList');
+    
+    // Use a for loop to create list items
+    for (let i = 0; i < fruits.length; i++) {
+      // Create a new list item element
+      const listItem = document.createElement('li');
+      
+      // Set the text content of the list item
+      listItem.textContent = fruits[i];
+      
+      // Append the list item to the fruitList
+      fruitList.appendChild(listItem);
+    }
+
+  //my example using for loop 
+  //using arrays you define tha array then define key to travas the array...
+  
+  const pay = {
+    date:  '23/4/2024',
+    name:  'Mirium Nyaboke',
+    invoice_no:  'AQE23602024J',
+    quantity:  '1,234,650 tonnes',
+    price:  'each kg Ksh 200'
+  };
+  const infoElement = document.getElementById('workers');
+  let receipt = '';
+  for(const key in pay)
+  {
+    if(pay.hasOwnProperty(key))
+    {
+        receipt += `${key};${pay[key]}<br>`;
+    }
+  }
+
+  infoElement.innerHTML = receipt
+    </script>
+</body>
+</html>

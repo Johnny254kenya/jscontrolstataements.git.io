@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="grade" name="grade" placeholder="Enter your marks">
+        <button onclick="myGrade()">score</button>
+        <div id="score"></div>
+    </div>
+
+    <script>
+function myGrade()
+{
+const num = parseFloat(document.getElementById('grade').value);// here you get the input from the user by id value grade...
+let result = '';
+
+//the condition statements here...
+if(num >100)
+{
+    report ='Error! kindily confirm your marks';
+}
+else if
+(num >= 89 && num <=100)
+{
+    report = 'Your score is A: Congradulations!';
+
+}
+else if
+(num >= 79 && num<=88){
+    report = 'Your score is A-';
+}
+else if
+(num >= 69 && num<=78){
+    report = 'Your score is B+';
+}
+else if
+(num >= 59 && num<=68){
+    report = 'Your score is B';
+}
+else if
+(num >= 49 && num<=58){
+    report = 'Your score is B-';
+}
+else if
+(num >= 39 && num<=48){
+    report = 'Your score is C+';
+}
+else if
+(num >= 29 && num<=38){
+    report = 'Your score is C';
+}
+else if
+(num >= 19 && num<=28){
+    report = 'Your score is C-';
+}
+else if
+(num >= 9 && num<=18){
+    report = 'Your score is D+';
+}
+else if
+(num >= -1 && num<=8){
+    report = 'Your score is D';
+}
+else if
+(num >= -11 && num<=-2){
+    report = 'Your score is D-';
+}
+else if
+(num >= -23 && num<=-8){
+    report = 'Your score is E';
+}
+
+document.getElementById('score').innerText = report;
+
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop Example</title>
+</head>
+<body>
+    <h1>Do While Loop Example</h1>
+    <p>Click the button below to start the loop:</p>
+    <button onclick="startLoop()">Start Loop</button>
+    <p id="result"></p>
+
+    <script>
+        function startLoop() {
+            var number;
+            var resultText = "You entered the following numbers: ";
+            
+            // Do...while loop
+            do {
+                // Prompt the user to enter a number
+                number = prompt("Please enter a number greater than 10:");
+                
+                // Add the entered number to the result text
+                resultText += number + " ";
+            } while (number <= 10);
+            
+            // Update the result paragraph with the entered numbers
+            document.getElementById("result").textContent = resultText + ". The last number was greater than 10.";
+        }
+    </script>
+</body>
+</html>

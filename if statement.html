@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Checker</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Temperature Checker</h2>
+        <input type="number" id="temperature" placeholder="Enter temperature in °C">
+        <button onclick="checkTemperature()">Check Temperature</button>
+        <div id="result"></div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <h2>Think of a number!?</h2>
+        <input type="number" id="statuses" placeholder="enter your number here">
+        <button onclick="statuses()">Check number status</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function statuses() {
+            const no_nm = parseFloat(document.getElementById('statuses').value);
+            let sms = '';
+
+            if (no_nm >0) {
+                sms = "This is a positive number dude!";
+            } else if (no_nm < 0) {
+                sms = "This number is negative dude!";
+            }
+
+            document.getElementById('output').innerText = sms;
+        }
+    </script>
+     <script>
+        function checkTemperature() {
+            const temp = parseFloat(document.getElementById('temperature').value);
+            let message = '';
+
+            if (temp > 30) {
+                message = "It's hot!";
+            } else if (temp >= 20 && temp <= 30) {
+                message = "It's warm!";
+            } else if(temp <=19){
+                message = "It's cold!";
+            }
+            else 
+            {
+                message:'Error! Please specify your temperatures'
+            }
+
+            document.getElementById('result').innerText = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="number" name="num" id="num" placeholder="enter your number">
+        <button onclick="confirmnumber()">confirmnumber</button>
+        <div id="rusult"></div>
+    </div>
+<!-- using js to accept number that will output if the number is odd or even-->
+    <script>
+function confirmnumber(){
+    const nnm = parseFloat(document.getElementById('num').value); // parseFloat here is used to accept numbers with decimal points 
+    let report = ''; // here is used to give back the report when calling the function...
+
+    if (nnm % 2 ===0)// means if variable nnm is divide by 2 and the remainder is  0 then it is even
+    {
+        report = "The number is even";
+    }
+    else{
+        report = 'The number is odd';
+    }
+
+    document.getElementById('rusult').innerText = report;
+}
+
+    </script>
+</body>
+</html>

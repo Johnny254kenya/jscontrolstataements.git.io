@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch Statement Example</title>
+</head>
+<body>
+  <h1>Choose Your Favorite Fruit</h1>
+  <select id="fruitSelector">
+    <option value="default">Select a fruit</option>
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="cherry">Cherry</option>
+    <option value="date">Date</option>
+  </select>
+  
+  <p id="fruitDescription"></p>
+  
+  <script>
+    document.getElementById('fruitSelector').addEventListener('change', function() {
+      const selectedFruit = this.value;
+      const message = document.getElementById('fruitDescription');
+      
+      switch (selectedFruit) {
+        case 'apple':
+         message.textContent = 'Apples are sweet, edible fruits produced by an apple tree.';
+          break;
+        case 'banana':
+          message.textContent= 'Bananas are elongated, edible fruits produced by several kinds of large herbaceous flowering plants.';
+          break;
+        case 'cherry':
+          message.textContent = 'Cherries are small, round fruits that can be sweet or tart.';
+          break;
+        case 'date':
+          message .textContent= 'Dates are the fruit of the date palm tree and are known for their sweetness.';
+          break;
+        default:
+          message.textContent= '';
+      }
+    });
+  </script>
+</body>
+</html>
